@@ -14,8 +14,10 @@
             Console.WriteLine("Usted es un adolescente")
         ElseIf edad > 17 And edad <= 65 Then
             Console.WriteLine("Usted es un mayor de edad")
-        ElseIf edad > 65 Then
+        ElseIf edad > 65 And edad <= 80 Then
             Console.WriteLine("Usted es un adulto mayor")
+        ElseIf edad > 80 Then
+            Console.WriteLine("Usted es un larga vida")
         End If
         Console.ReadKey()
     End Sub
