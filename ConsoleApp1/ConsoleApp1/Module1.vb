@@ -1,20 +1,22 @@
 ﻿Module Module1
 
     Sub Main()
-        'Lab1 = 30%, Lab2 = 30%, P = 40% = NF COMPUTO'
-        Dim lab1, lab2, parcial, nf_computo As Double
+        'Pedir la edad y realizar la clasificación: bebé: 0-2, niño: 3-11, adolescente: 12-17, mayor de edad: 18-65, adulto mayor: 66-x'
+        Dim edad As SByte
+        Console.Write("Digite su edad: ")
+        edad = Console.ReadLine()
 
-        Console.Write("Digite la nota del laboratorio 1: ")
-        lab1 = Console.ReadLine()
-
-        Console.Write("Digite la nota del laboratorio 2: ")
-        lab2 = Console.ReadLine()
-
-        Console.Write("Digite la nota del parcial: ")
-        parcial = Console.ReadLine()
-
-        nf_computo = (lab1 * 0.3 + lab2 * 0.3 + parcial * 0.4)
-        Console.Write("Su nota final del computo es: " & nf_computo)
+        If edad <= 2 Then
+            Console.WriteLine("Usted es un bebé.")
+        ElseIf edad > 2 And edad <= 11 Then
+            Console.WriteLine("Usted es un niño")
+        ElseIf edad > 11 And edad <= 17 Then
+            Console.WriteLine("Usted es un adolescente")
+        ElseIf edad > 17 And edad <= 65 Then
+            Console.WriteLine("Usted es un mayor de edad")
+        ElseIf edad > 65 Then
+            Console.WriteLine("Usted es un adulto mayor")
+        End If
         Console.ReadKey()
     End Sub
 
