@@ -1,25 +1,49 @@
 ﻿Module Module1
 
     Sub Main()
-        'Pedir la edad y realizar la clasificación: bebé: 0-2, niño: 3-11, adolescente: 12-17, mayor de edad: 18-65, adulto mayor: 66-x'
-        Dim edad As SByte
-        Console.Write("Digite su edad: ")
-        edad = Console.ReadLine()
+        Dim objEstudiante1 = New Estudiante()
+        Dim respuesta As Char
 
-        If edad <= 2 Then
-            Console.WriteLine("Usted es un bebé.")
-        ElseIf edad > 2 And edad <= 11 Then
-            Console.WriteLine("Usted es un niño")
-        ElseIf edad > 11 And edad <= 17 Then
-            Console.WriteLine("Usted es un adolescente")
-        ElseIf edad > 17 And edad <= 65 Then
-            Console.WriteLine("Usted es un mayor de edad")
-        ElseIf edad > 65 And edad <= 80 Then
-            Console.WriteLine("Usted es un adulto mayor")
-        ElseIf edad > 80 Then
-            Console.WriteLine("Usted es un larga vida")
-        End If
+        Console.WriteLine("***** UNIVERSIDAD GERADO BARRIOS *****")
+
+        Console.Write("¿Desea ingresar notas? Si (s) No (n)")
+        Console.WriteLine()
+        respuesta = Console.ReadLine().ToLower()
+        While respuesta = "s"
+            Console.Write("Carrera: ")
+            objEstudiante1.setCarrera(Console.ReadLine().ToString())
+            Console.Write("Apellidos: ")
+            objEstudiante1.setApellidos(Console.ReadLine().ToString())
+            Console.Write("Nombres: ")
+            objEstudiante1.setNombre(Console.ReadLine().ToString())
+            Console.Write("Codigo: ")
+            objEstudiante1.setCodigo(Console.ReadLine().ToString())
+            Console.Write("Materia: ")
+            objEstudiante1.setMateria(Console.ReadLine().ToString())
+            Console.WriteLine("*************************************")
+
+            Console.Write("Digite su nota 1: ")
+            objEstudiante1.setNota1(Console.ReadLine())
+            Console.Write("Digite su nota 2: ")
+            objEstudiante1.setNota2(Console.ReadLine())
+            Console.Write("Digite su nota 3: ")
+            objEstudiante1.setNota3(Console.ReadLine())
+            Console.Write("Digite su nota 4: ")
+            objEstudiante1.setNota4(Console.ReadLine())
+
+            Console.WriteLine("*************************************")
+            Console.WriteLine("Alumno: " & objEstudiante1.getApellidos() & " " & objEstudiante1.getNombre())
+            Console.WriteLine("Codigo de alumno: " & objEstudiante1.getCodigo())
+            Console.WriteLine("Carrera: " & objEstudiante1.getCarrera())
+            Console.WriteLine("Materia: " & objEstudiante1.getMateria())
+            Console.WriteLine("Nota final de la materia: " & objEstudiante1.getNotaFinal())
+
+            Console.Write("¿Desea ingresar notas? Si (s) No (n)")
+            Console.WriteLine()
+            respuesta = Console.ReadLine().ToLower()
+        End While
         Console.ReadKey()
     End Sub
 
 End Module
+
