@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\bin\Debug\pooe.exe.config
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\bin\Debug\pooe.exe
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\bin\Debug\pooe.pdb
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\bin\Debug\pooe.xml
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\obj\Debug\pooe.vbproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\obj\Debug\pooe.Form1.resources
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\obj\Debug\pooe.Resources.resources
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\obj\Debug\pooe.vbproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\obj\Debug\pooe.vbproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\obj\Debug\pooe.exe
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\obj\Debug\pooe.xml
+C:\Users\Lenovo\source\repos\Clases-POOE\pooe\pooe\obj\Debug\pooe.pdb
