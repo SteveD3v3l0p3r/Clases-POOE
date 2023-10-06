@@ -1,9 +1,6 @@
 ﻿Public Class Form1
 
     Dim objConversor = New Conversor()
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Sub cambiarConversor(ByVal tipo As SByte)
         cboDeTipoConversor.Items.Clear()
@@ -18,6 +15,17 @@
     End Sub
 
     Private Sub btnConvertir_Click(sender As Object, e As EventArgs) Handles btnConvertir.Click
-        lblRespuesta.Text = Math.Round(objConversor.convertir(cboTipoConversor.SelectedIndex, cboDeTipoConversor.SelectedIndex, cboATipoConversor.SelectedIndex, txtConvertir.Text), 2).ToString() + " " + objConversor.etiquetas(cboTipoConversor.SelectedIndex)(cboATipoConversor.SelectedIndex)
+        Try
+            lblRespuesta.Text = Math.Round(objConversor.convertir(cboTipoConversor.SelectedIndex, cboDeTipoConversor.SelectedIndex, cboATipoConversor.SelectedIndex, txtConvertir.Text), 2).ToString() + " " + objConversor.etiquetas(cboTipoConversor.SelectedIndex)(cboATipoConversor.SelectedIndex)
+        Catch ex As Exception
+            MessageBox.Show("Por favor ingrese datos a convertir", "SystemAlert", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
+
+    End Sub
+
+    Private Sub limpiarError()
+        erpConversor.SetError(cboTipoConversor, "")
+        erpConversor.SetError(cboDeTipoConversor, "")
+        erpConversor.SetError(cboATipoConversor, "")
     End Sub
 End Class

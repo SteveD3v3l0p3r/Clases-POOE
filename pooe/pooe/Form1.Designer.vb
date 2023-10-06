@@ -22,6 +22,7 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblTipo = New System.Windows.Forms.Label()
         Me.lblDeTipo = New System.Windows.Forms.Label()
         Me.lblATipo = New System.Windows.Forms.Label()
@@ -32,6 +33,8 @@ Partial Class Form1
         Me.btnConvertir = New System.Windows.Forms.Button()
         Me.txtConvertir = New System.Windows.Forms.TextBox()
         Me.lblCantidad = New System.Windows.Forms.Label()
+        Me.erpConversor = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.erpConversor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTipo
@@ -141,6 +144,10 @@ Partial Class Form1
         Me.lblCantidad.TabIndex = 9
         Me.lblCantidad.Text = "Cantidad:"
         '
+        'erpConversor
+        '
+        Me.erpConversor.ContainerControl = Me
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -160,6 +167,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lblTipo)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.erpConversor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -175,4 +183,5 @@ Partial Class Form1
     Friend WithEvents btnConvertir As Button
     Friend WithEvents txtConvertir As TextBox
     Friend WithEvents lblCantidad As Label
+    Friend WithEvents erpConversor As ErrorProvider
 End Class
